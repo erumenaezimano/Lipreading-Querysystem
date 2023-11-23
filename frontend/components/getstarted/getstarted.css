@@ -1,0 +1,42 @@
+.app__getstarted {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #333333); 
+    padding: 10px 0; 
+}
+
+.app__getstarted-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+.app__getstarted-links li {
+    margin: 0 1rem;
+    cursor: pointer;
+    color: var(--color-black);
+    list-style: none;
+}
+
+.app__getstarted-links li:hover {
+    color: var(--color-grey);
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-golden);
+    color: var(--color-black);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button-link:hover {
+    background-color: var(--color-gray);
+  }

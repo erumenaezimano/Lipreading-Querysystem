@@ -1,0 +1,87 @@
+/* Adjust the background image container */
+.app__background-img {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set the height as needed */
+    overflow: hidden;
+  }
+  
+  /* Style for the background image */
+  .app__background-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Styling for the entry box */
+  .entry-box {
+    border: 3px solid var(--color-golden);
+    padding: 2rem 2rem;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    background: var(--color-white);
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  /* Styling for individual entries */
+  .entry {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for word */
+  .word {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for word details */
+  .word-details {
+    margin-left: 15px;
+  }
+  
+  /* Styling for word details' child elements */
+  .word-details > div {
+    margin-bottom: 5px;
+  }
+  
+  /* Clearfix for floats */
+  /*.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }*/
+  
+
+  
+.customButton {
+    padding: 10px 20px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin: 0 auto;
+  }
+  
+  .customButton a:hover {
+    border-bottom: 1px solid var(--color-golden);
+}
+
+.customButton a{
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: .5s ease;
+    color: whitesmoke
+
+  }
+  
+  

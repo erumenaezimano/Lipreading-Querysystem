@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+/* Styling for search container */
+.search-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 5vh; 
+  margin-bottom:40vh;
+}
+
+
+
+/* Styling for search-input */
+.search-input {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  transition:0.4s;
+  padding: 16px;
+}
+
+
+
+
+/* Styling for input element */
+.form-control {
+  width: 250px; /* Adjust the width as needed */
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  margin-right: 20px;
+  transition: 0.4s;
+}
+
+.form-control:focus-within {
+box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+transform: translateY(-5px);
+}
+
+/* Styling for search button */
+.btn-outline-success {
+  cursor: pointer;
+  background-color: #080857;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100px; /* Set a consistent width for the button */
+}
+
+.btn-outline-success:hover {
+  background-color: #715c07;
+}
+
+/* Additional styling for spacing */
+.input-group-btn {
+  display: flex;
+  align-items: center;
+}
+
+.results {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.result {
+  width: 100%;
+  padding:16px;
+  margin-bottom: 16px;
+  background-color: bisque;
+  border-radius: 16px;
+  transition: 0.4s;
+  font-size: 30px;
+  color: #0b0101
+}
+
+.result:hover {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
+.result h3{
+  color:black;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.result p{
+  color:rgba(0,0,0, 0.5);
+font-size: 20px;
+margin-bottom: 16px;
+}
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+}
+
+
+  @media screen and (max-width: 550px) {
+    .section__padding {
+      padding: 4rem 2rem;
+    }
+  
+    .section__margin {
+      margin: 4rem 2rem;
+    }  
+  }

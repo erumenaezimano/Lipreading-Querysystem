@@ -1,0 +1,189 @@
+.registeration-container {
+	height: 120vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* form styles */
+.form {
+	width: 90%;
+	max-width: 450px;
+	padding: 1em 1em 2em 1em;
+	background-color: white;
+	margin: 2em auto 10em auto;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+}
+.form-header {
+	padding-bottom: 21px;
+	border-bottom: 1px solid #e6e6e6;
+	width: 100%;
+}
+
+.form-header h3 {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 54px;
+	color: var(--dark-gray);
+}
+
+.form-header p {
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--light-text);
+	margin-top: 5px;
+}
+.login-active {
+	color: rgb(52, 52, 133);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.form-body {
+	margin-top: 18px;
+}
+.form-group {
+	position: relative;
+}
+.form-group:not(:first-child) {
+	margin-top: 0;
+}
+.form-group--side {
+	display: flex;
+	justify-content: space-between;
+}
+.form-group label {
+	font-size: 14px;
+	line-height: 24px;
+	color: var(--light-text);
+	display: block;
+	margin-bottom: 3px;
+}
+.form-control {
+	width: 100%;
+	padding: 0.8rem;
+	font-size: 16px;
+	border-radius: 5px;
+	background: #f8f8f8;
+	border: 1px solid #cacaca;
+	color: var(--dark-gray);
+}
+.form-button {
+	border: none;
+	background-color: rgb(52, 52, 133);
+	color: white;
+	font-family: inherit;
+	font-size: 16px;
+	border-radius: 5px;
+	box-shadow: 0px 4px 22px -7px rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	height: 45px;
+}
+
+.form-group i:not(:last-child) {
+	position: absolute;
+	bottom: 35%;
+	right: 2%;
+	visibility: hidden;
+}
+
+.form-group small {
+	visibility: hidden;
+	/* position: absolute; */
+}
+
+i.move {
+	left: 43%;
+}
+
+/* form states */
+
+.error .form-control {
+	border-color: #e74c3c;
+}
+
+.error .form-control:focus {
+	outline-color: #e74c3c;
+}
+
+.error small {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.error .fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.success .form-control {
+	border-color: #2ecc71;
+}
+.success .fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control:focus {
+	outline-color: var(--primary-blue);
+}
+
+@media (max-width: 760px) {
+	.form {
+		padding: 0 1em 2em;
+	}
+
+	.form-header {
+		width: 90%;
+		padding: 1em;
+	}
+
+	.form-group--side {
+		flex-direction: column;
+	}
+
+	.form-body {
+		padding: 0 1em;
+	}
+
+	i.move {
+		left: 95%;
+		top: 22%;
+	}
+
+	i.sec {
+		top: 77%;
+	}
+
+	.form-group--side div:nth-child(2) {
+		margin-top: 20px;
+	}
+}
+
+.hero-caption--login {
+	margin: 2em 0;
+}
+.form-button:disabled {
+	background-color: var(--light-text);
+	cursor: not-allowed;
+	color: #fff;
+}
+i.loader {
+	position: absolute;
+	left: 49%;
+	transform: translateX(-50%);
+	bottom: 27%;
+	animation: rotate 1.6s ease-in infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
