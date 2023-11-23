@@ -1,0 +1,115 @@
+---
+title: "AR"
+output: html_document
+date: "2023-05-24"
+---
+```{r}
+if ("arules" %in% rownames(installed.packages())) {
+  # Detach the 'arules' package if it is loaded
+  detach("package:arules", unload = TRUE)
+}
+```
+
+```{r}
+install.packages("arules")
+```
+
+```{r}
+library(arules)
+```
+
+```{r }
+data <- read_xlsx("C:/Users/Erumena/Downloads/s_text.xlsx")
+```
+
+
+```{r }
+# Convert the text data into transactions
+transactions <- strsplit(data$text, "\\s+")
+```
+
+
+```{r}
+# Convert transactions to a transaction object
+trans_obj <- as(transactions, "transactions")
+```
+
+```{r}
+# Perform association rule mining using Apriori algorithm
+rules <- apriori(trans_obj, parameter = list(support = 0.001, confidence = 0.8))
+```
+
+```{r}
+# Print the discovered association rules
+inspect(rules)
+```
+```{r}
+install.packages("arulesViz")
+```
+
+```{r}
+library(arulesViz)
+```
+
+
+`````{r}
+# Visualize rules as a scatterplot
+#plot(rules, method = "scatterplot")
+```
+
+```{r}
+# Visualize rules as a network graph
+plot(rules, method = "graph", control = list(max.overlaps = 50))
+```
+
+
+```{r}
+# Visualize rules as a lift plot
+plot(rules, method = "grouped", grid=FALSE)
+```
+
+```{r}
+# Visualize the rules using an interactive graph (htmlwidget engine)
+interactive_graph <- plot(rules, method = "graph", engine = "htmlwidget", control = list(type = "items"))
+```
+
+```{r}
+# Specify a layout for the graph
+layout_options <- list(
+  ggraphopts = list(layout = "kk"),
+  nodeopts = list(shape = "ellipse", alpha = 0.5),
+  edgeopts = list(color = "gray", width = 1)
+)
+```
+
+
+```{r}
+# Set the layout options and display the interactive graph
+interactive_graph$control <- layout_options
+interactive_graph
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
